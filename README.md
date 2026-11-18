@@ -13,7 +13,7 @@ Host-dependent ShareX features are not available in this build: upload, ShareX p
 
 ## Download
 
-Windows x64 installers and checksums are published as prereleases on the [releases page](https://github.com/windedge/ShareX.PhotoEditor/releases). The installer bundles a self-contained executable, so no .NET runtime is required. ARM64 is not included yet.
+Windows x64 installers and checksums are published on the [releases page](https://github.com/windedge/ShareX.PhotoEditor/releases). The installer bundles a self-contained executable, so no .NET runtime is required. ARM64 is not included yet.
 
 ## Build
 
