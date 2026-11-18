@@ -1,3 +1,31 @@
+# Standalone ShareX PhotoEditor
+
+This is a fork of [ShareX/ShareX](https://github.com/ShareX/ShareX) that builds the ShareX photo editor as a standalone Windows application. It is not an official ShareX release.
+
+The editor is the layer-based photo editor that ships inside ShareX, including selection tools, retouching brushes, adjustment layers, masks, filters, layer styles and editable project files. Because it runs without the ShareX host, host-dependent features such as upload, ShareX post-capture tasks, pin to screen, print, region capture and fullscreen capture are not available. Everything else, including opening images, editing, exporting and saving project files, works on its own.
+
+## Download
+
+Installers and checksums are published as prereleases on the [releases page](https://github.com/windedge/ShareX.PhotoEditor/releases). Each release ships a Windows x64 installer that bundles a self-contained executable, so no .NET runtime is required.
+
+## Build
+
+Requirements: .NET 11 SDK and Inno Setup 6 (only for the installer).
+
+```bash
+# Debug build
+dotnet build ShareX.PhotoEditor.App/ShareX.PhotoEditor.App.csproj -c Debug -p:Platform=x64
+
+# Self-contained single-file executable
+dotnet publish ShareX.PhotoEditor.App/ShareX.PhotoEditor.App.csproj -c Release -p:Platform=x64 -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
+```
+
+The executable is written to `ShareX.PhotoEditor.App/bin/Release/win-x64/publish/`. Image paths can be passed as command-line arguments and are opened on startup. Settings are stored in `Documents\ShareX\PhotoEditor.App.json`.
+
+The rest of this README describes upstream ShareX.
+
+---
+
 <p align="center"><a href="https://getsharex.com"><img src="https://getsharex.com/img/ShareX_Banner.png" alt="ShareX Banner"/></a></p>
 <h3 align="center">Screen capture, file sharing and productivity tool</h3>
 <br>
