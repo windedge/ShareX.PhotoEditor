@@ -2,6 +2,8 @@
 
 A fork of [ShareX](https://github.com/ShareX/ShareX) that builds the ShareX photo editor as a standalone Windows application. This is not an official ShareX release.
 
+![ShareX PhotoEditor standalone](docs/photoeditor-screenshot.png)
+
 ## Features
 
 - Layer-based editing with selections, masks, adjustment layers, filters, layer styles and retouching brushes
